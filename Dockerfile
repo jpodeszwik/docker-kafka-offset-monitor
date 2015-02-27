@@ -6,7 +6,7 @@ RUN \
     DEBIAN_FRONTEND=noninteractive apt-get --yes --force-yes install sbt
 
 RUN \
-    git clone https://github.com/quantifind/KafkaOffsetMonitor.git /KafkaOffsetMonitor && \
+    git clone -b v0.2.1 https://github.com/quantifind/KafkaOffsetMonitor.git /KafkaOffsetMonitor && \
     cd /KafkaOffsetMonitor && \
     sbt assembly && \
     mv /KafkaOffsetMonitor/target/scala-*/KafkaOffsetMonitor-assembly-*.jar / && \
